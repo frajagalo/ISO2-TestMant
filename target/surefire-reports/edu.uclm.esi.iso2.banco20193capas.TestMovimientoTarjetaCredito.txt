@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: edu.uclm.esi.iso2.banco20193capas.TestMovimientoTarjetaCredito
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 s - in edu.uclm.esi.iso2.banco20193capas.TestMovimientoTarjetaCredito
