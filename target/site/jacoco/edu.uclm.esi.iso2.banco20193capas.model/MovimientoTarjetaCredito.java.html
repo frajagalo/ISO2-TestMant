@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MovimientoTarjetaCredito.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">banco20193capas</a> &gt; <a href="index.source.html" class="el_package">edu.uclm.esi.iso2.banco20193capas.model</a> &gt; <span class="el_source">MovimientoTarjetaCredito.java</span></div><h1>MovimientoTarjetaCredito.java</h1><pre class="source lang-java linenums">package edu.uclm.esi.iso2.banco20193capas.model;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MovimientoTarjetaCredito.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">banco20193capas</a> &gt; <a href="index.source.html" class="el_package">edu.uclm.esi.iso2.banco20193capas.model</a> &gt; <span class="el_source">MovimientoTarjetaCredito.java</span></div><h1>MovimientoTarjetaCredito.java</h1><pre class="source lang-java linenums">package edu.uclm.esi.iso2.banco20193capas.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,17 +21,17 @@ public class MovimientoTarjetaCredito {
 	private String concepto;
 	private boolean liquidado;
 	
-<span class="fc" id="L24">	public MovimientoTarjetaCredito() {</span>
-<span class="fc" id="L25">	}</span>
+<span class="nc" id="L24">	public MovimientoTarjetaCredito() {</span>
+<span class="nc" id="L25">	}</span>
 
-<span class="fc" id="L27">	public MovimientoTarjetaCredito(TarjetaCredito tarjeta, double importe, String concepto) {</span>
-<span class="fc" id="L28">		this.importe = importe;</span>
-<span class="fc" id="L29">		this.concepto = concepto;</span>
-<span class="fc" id="L30">		this.tarjeta = tarjeta;</span>
-<span class="fc" id="L31">	}</span>
+<span class="nc" id="L27">	public MovimientoTarjetaCredito(TarjetaCredito tarjeta, double importe, String concepto) {</span>
+<span class="nc" id="L28">		this.importe = importe;</span>
+<span class="nc" id="L29">		this.concepto = concepto;</span>
+<span class="nc" id="L30">		this.tarjeta = tarjeta;</span>
+<span class="nc" id="L31">	}</span>
 
 	public Long getId() {
-<span class="fc" id="L34">		return id;</span>
+<span class="nc" id="L34">		return id;</span>
 	}
 
 	public void setId(Long id) {
@@ -47,7 +47,7 @@ public class MovimientoTarjetaCredito {
 <span class="nc" id="L47">	}</span>
 
 	public double getImporte() {
-<span class="fc" id="L50">		return importe;</span>
+<span class="nc" id="L50">		return importe;</span>
 	}
 
 	public void setImporte(double importe) {
@@ -63,12 +63,12 @@ public class MovimientoTarjetaCredito {
 <span class="nc" id="L63">	}</span>
 
 	public boolean isLiquidado() {
-<span class="fc" id="L66">		return liquidado;</span>
+<span class="nc" id="L66">		return liquidado;</span>
 	}
 
 	public void setLiquidado(boolean liquidado) {
-<span class="fc" id="L70">		this.liquidado = liquidado;</span>
-<span class="fc" id="L71">	}</span>
+<span class="nc" id="L70">		this.liquidado = liquidado;</span>
+<span class="nc" id="L71">	}</span>
 	
 	
 }

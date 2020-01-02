@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Tarjeta.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">banco20193capas</a> &gt; <a href="index.source.html" class="el_package">edu.uclm.esi.iso2.banco20193capas.model</a> &gt; <span class="el_source">Tarjeta.java</span></div><h1>Tarjeta.java</h1><pre class="source lang-java linenums">package edu.uclm.esi.iso2.banco20193capas.model;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Tarjeta.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">banco20193capas</a> &gt; <a href="index.source.html" class="el_package">edu.uclm.esi.iso2.banco20193capas.model</a> &gt; <span class="el_source">Tarjeta.java</span></div><h1>Tarjeta.java</h1><pre class="source lang-java linenums">package edu.uclm.esi.iso2.banco20193capas.model;
 
 import java.security.SecureRandom;
 
@@ -19,7 +19,7 @@ import edu.uclm.esi.iso2.banco20193capas.exceptions.TokenInvalidoException;
 
 /**
  * Representa una tarjeta bancaria, bien de débito o bien de crédito.
- * Una {@code Tarjeta} está asociada a un {@code Cliente} y a una {@Cuenta}.
+ * Una {code Tarjeta} está asociada a un {code Cliente} y a una {Cuenta}.
  * 
  */
 @Entity
@@ -41,48 +41,48 @@ public abstract class Tarjeta {
 	@ManyToOne
 	protected Cuenta cuenta;
 	
-<span class="fc" id="L44">	public Tarjeta() {</span>
-<span class="fc" id="L45">		activa = true;</span>
-<span class="fc" id="L46">		this.intentos = 0;</span>
-<span class="fc" id="L47">		SecureRandom dado = new SecureRandom();</span>
-<span class="fc" id="L48">		pin = 0;</span>
-<span class="fc bfc" id="L49" title="All 2 branches covered.">		for (int i=0; i&lt;=3; i++)</span>
-<span class="fc" id="L50">			pin = (int) (pin + dado.nextInt(10) * Math.pow(10, i));	</span>
-<span class="fc" id="L51">	}</span>
+<span class="nc" id="L44">	public Tarjeta() {</span>
+<span class="nc" id="L45">		activa = true;</span>
+<span class="nc" id="L46">		this.intentos = 0;</span>
+<span class="nc" id="L47">		SecureRandom dado = new SecureRandom();</span>
+<span class="nc" id="L48">		pin = 0;</span>
+<span class="nc bnc" id="L49" title="All 2 branches missed.">		for (int i=0; i&lt;=3; i++)</span>
+<span class="nc" id="L50">			pin = (int) (pin + dado.nextInt(10) * Math.pow(10, i));	</span>
+<span class="nc" id="L51">	}</span>
 	
 	protected void comprobar(int pin) throws TarjetaBloqueadaException, PinInvalidoException {
-<span class="fc bfc" id="L54" title="All 2 branches covered.">		if (!this.isActiva())</span>
-<span class="fc" id="L55">			throw new TarjetaBloqueadaException();</span>
-<span class="fc bfc" id="L56" title="All 2 branches covered.">		if (this.pin!=pin) {</span>
-<span class="fc" id="L57">			this.intentos++;</span>
-<span class="fc bfc" id="L58" title="All 2 branches covered.">			if (intentos == 3)</span>
-<span class="fc" id="L59">				bloquear();</span>
-<span class="fc" id="L60">			throw new PinInvalidoException();</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">		if (!this.isActiva())</span>
+<span class="nc" id="L55">			throw new TarjetaBloqueadaException();</span>
+<span class="nc bnc" id="L56" title="All 2 branches missed.">		if (this.pin!=pin) {</span>
+<span class="nc" id="L57">			this.intentos++;</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">			if (intentos == 3)</span>
+<span class="nc" id="L59">				bloquear();</span>
+<span class="nc" id="L60">			throw new PinInvalidoException();</span>
 		}		
-<span class="fc" id="L62">	}</span>
+<span class="nc" id="L62">	}</span>
 	
 	/**
 	 * Permite confirmar una compra que se ha iniciado por Internet. El método {@link #comprarPorInternet(int, double)} devuelve un token que debe ser introducido en este método.
 	 * @param token	El token que introduce el usuario. Para que la compra se confirme, ha de coincidir con el token devuelto por {@link #comprarPorInternet(int, double)}
 	 * @throws TokenInvalidoException	Si el {@code token} introducido es distinto del recibido desde {@link #comprarPorInternet(int, double)}
-	 * @throws ImporteInvalidoException	 Si el importe&lt;=0
+	 * @throws ImporteInvalidoException	 Si el importe menor o igual a 0
 	 * @throws SaldoInsuficienteException	Si el saldo de la cuenta asociada a la tarjeta (en el caso de {@link TarjetaDebito}) es menor que el importe, o 
 	 * 									si el crédito disponible en la tarjeta de crédito es menor que el importe	
 	 * @throws TarjetaBloqueadaException	Si la tarjeta está bloqueada
 	 * @throws PinInvalidoException	Si el pin que se introdujo es inválido
 	 */
 	public void confirmarCompraPorInternet(int token) throws TokenInvalidoException, ImporteInvalidoException, SaldoInsuficienteException, TarjetaBloqueadaException, PinInvalidoException {
-<span class="pc bpc" id="L75" title="1 of 2 branches missed.">		if (token!=this.compra.getToken()) {</span>
+<span class="nc bnc" id="L75" title="All 2 branches missed.">		if (token!=this.compra.getToken()) {</span>
 <span class="nc" id="L76">			this.compra = null;</span>
 <span class="nc" id="L77">			throw new TokenInvalidoException();</span>
 		}
-<span class="fc" id="L79">		this.comprar(this.pin, this.compra.getImporte());</span>
-<span class="fc" id="L80">	}</span>
+<span class="nc" id="L79">		this.comprar(this.pin, this.compra.getImporte());</span>
+<span class="nc" id="L80">	}</span>
 
 	protected abstract void bloquear();
 
 	public Long getId() {
-<span class="fc" id="L85">		return id;</span>
+<span class="nc" id="L85">		return id;</span>
 	}
 
 	public void setId(Long id) {
@@ -90,7 +90,7 @@ public abstract class Tarjeta {
 <span class="nc" id="L90">	}</span>
 
 	public Integer getPin() {
-<span class="fc" id="L93">		return pin;</span>
+<span class="nc" id="L93">		return pin;</span>
 	}
 
 	public void setPin(Integer pin) {
@@ -102,23 +102,23 @@ public abstract class Tarjeta {
 	}
 
 	public void setTitular(Cliente titular) {
-<span class="fc" id="L105">		this.titular = titular;</span>
-<span class="fc" id="L106">	}</span>
+<span class="nc" id="L105">		this.titular = titular;</span>
+<span class="nc" id="L106">	}</span>
 
 	public Cuenta getCuenta() {
 <span class="nc" id="L109">		return cuenta;</span>
 	}
 
 	public void setCuenta(Cuenta cuenta) {
-<span class="fc" id="L113">		this.cuenta = cuenta;</span>
-<span class="fc" id="L114">	}</span>
+<span class="nc" id="L113">		this.cuenta = cuenta;</span>
+<span class="nc" id="L114">	}</span>
 
 	/**
 	 * 
 	 * @return true si la tarjeta está activa; false si está bloqueada
 	 */
 	public Boolean isActiva() {
-<span class="fc" id="L121">		return activa;</span>
+<span class="nc" id="L121">		return activa;</span>
 	}
 
 	public void setActiva(Boolean activa) {
