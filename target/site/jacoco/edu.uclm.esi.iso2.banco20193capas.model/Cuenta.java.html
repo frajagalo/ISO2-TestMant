@@ -25,7 +25,7 @@ import edu.uclm.esi.iso2.banco20193capas.exceptions.SaldoInsuficienteException;
 @Entity
 public class Cuenta {
 	@Id 
-	protected Long id;
+	protected Long idCuenta;
 
 	@ManyToMany(fetch = FetchType.EAGER)
 	private List&lt;Cliente&gt; titulares;
@@ -38,7 +38,7 @@ public class Cuenta {
 	
 	public Cuenta(Long id) {
 <span class="nc" id="L40">		this();</span>
-<span class="nc" id="L41">		this.id=id;</span>
+<span class="nc" id="L41">		this.idCuenta=id;</span>
 <span class="nc" id="L42">	}</span>
 	
 	public Cuenta(Integer id) {
@@ -87,7 +87,7 @@ public class Cuenta {
 <span class="nc" id="L87">			throw new ImporteInvalidoException(importe);</span>
 <span class="nc bnc" id="L88" title="All 2 branches missed.">		if (importe&gt;getSaldo())</span>
 <span class="nc" id="L89">			throw new SaldoInsuficienteException();</span>
-<span class="nc" id="L90">		MovimientoCuenta movimiento = new MovimientoCuenta(this, -importe, concepto);</span>
+<span class="nc" id="L90">		final MovimientoCuenta movimiento = new MovimientoCuenta(this, -importe, concepto);</span>
 <span class="nc" id="L91">		Manager.getMovimientoDAO().save(movimiento);</span>
 <span class="nc" id="L92">	}</span>
 
@@ -97,7 +97,7 @@ public class Cuenta {
 	 * @param concepto	El concepto del movimiento
 	 */
 	public void retiroForzoso(double importe, String concepto) {
-<span class="nc" id="L100">		MovimientoCuenta movimiento = new MovimientoCuenta(this, -importe, concepto);</span>
+<span class="nc" id="L100">		final MovimientoCuenta movimiento = new MovimientoCuenta(this, -importe, concepto);</span>
 <span class="nc" id="L101">		Manager.getMovimientoDAO().save(movimiento);</span>
 <span class="nc" id="L102">	}</span>
 	
@@ -133,7 +133,7 @@ public class Cuenta {
 	 * @return	El saldo de la cuenta
 	 */
 	public double getSaldo() {
-<span class="nc" id="L136">		List&lt;MovimientoCuenta&gt; mm = Manager.getMovimientoDAO().findByCuentaId(this.id);</span>
+<span class="nc" id="L136">		List&lt;MovimientoCuenta&gt; mm = Manager.getMovimientoDAO().findByCuentaId(this.idCuenta);</span>
 <span class="nc" id="L137">		double saldo = 0.0;</span>
 <span class="nc bnc" id="L138" title="All 2 branches missed.">		for (MovimientoCuenta m : mm)</span>
 <span class="nc" id="L139">			saldo = saldo + m.getImporte();</span>
@@ -171,7 +171,7 @@ public class Cuenta {
 			}
 
 <span class="nc bnc" id="L173" title="All 2 branches missed.">		if (!encontrado)</span>
-<span class="nc" id="L174">			throw new ClienteNoAutorizadoException(nif, this.id);</span>
+<span class="nc" id="L174">			throw new ClienteNoAutorizadoException(nif, this.idCuenta);</span>
 <span class="nc" id="L175">		TarjetaDebito tarjeta = new TarjetaDebito();</span>
 <span class="nc" id="L176">		tarjeta.setCuenta(this);</span>
 <span class="nc" id="L177">		tarjeta.setTitular(cliente);</span>
@@ -199,7 +199,7 @@ public class Cuenta {
 <span class="nc" id="L199">				break;</span>
 			}
 <span class="nc bnc" id="L201" title="All 2 branches missed.">		if (!encontrado)</span>
-<span class="nc" id="L202">			throw new ClienteNoAutorizadoException(nif, this.id);</span>
+<span class="nc" id="L202">			throw new ClienteNoAutorizadoException(nif, this.idCuenta);</span>
 <span class="nc" id="L203">		TarjetaCredito tarjeta = new TarjetaCredito();</span>
 <span class="nc" id="L204">		tarjeta.setCuenta(this);</span>
 <span class="nc" id="L205">		tarjeta.setTitular(cliente);</span>
@@ -209,11 +209,11 @@ public class Cuenta {
 	}
 
 	public Long getId() {
-<span class="nc" id="L212">		return id;</span>
+<span class="nc" id="L212">		return idCuenta;</span>
 	}
 
 	public void setId(Long id) {
-<span class="nc" id="L216">		this.id = id;</span>
+<span class="nc" id="L216">		this.idCuenta = id;</span>
 <span class="nc" id="L217">	}</span>
 
 	public List&lt;Cliente&gt; getTitulares() {

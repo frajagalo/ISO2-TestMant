@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.6.1" timestamp="2020-01-02T19:35:58.446">
+<pmd version="5.6.1" timestamp="2020-01-03T22:58:56.672">
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/Lanzadora.java">
 <violation beginline="10" endline="30" begincolumn="24" endcolumn="1" rule="UseUtilityClass" ruleset="Design" package="edu.uclm.esi.iso2.banco20193capas" class="Lanzadora" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#UseUtilityClass" priority="3">
 All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
-</violation>
-<violation beginline="12" endline="12" begincolumn="33" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas" class="Lanzadora" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'args' is not assigned and could be declared final
-</violation>
-<violation beginline="16" endline="16" begincolumn="25" endcolumn="77" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas" class="Lanzadora" method="main" variable="pepe" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'pepe' could be declared final
-</violation>
-<violation beginline="19" endline="19" begincolumn="25" endcolumn="52" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas" class="Lanzadora" method="main" variable="cuenta" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'cuenta' could be declared final
 </violation>
 </file>
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/dao/MovimientoCuentaDAO.java">
@@ -25,34 +16,79 @@ Avoid variables with short names like id
 </violation>
 </file>
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/exceptions/ClienteNoAutorizadoException.java">
-<violation beginline="4" endline="4" begincolumn="62" endcolumn="63" rule="ShortVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="ClienteNoAutorizadoException" method="ClienteNoAutorizadoException" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+<violation beginline="4" endline="4" begincolumn="9" endcolumn="48" rule="DefaultPackage" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="ClienteNoAutorizadoException" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="5" endline="5" begincolumn="62" endcolumn="63" rule="ShortVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="ClienteNoAutorizadoException" method="ClienteNoAutorizadoException" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
 Avoid variables with short names like id
 </violation>
-<violation beginline="4" endline="4" begincolumn="57" endcolumn="63" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="ClienteNoAutorizadoException" method="ClienteNoAutorizadoException" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+<violation beginline="5" endline="5" begincolumn="57" endcolumn="63" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="ClienteNoAutorizadoException" method="ClienteNoAutorizadoException" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'id' is not assigned and could be declared final
 </violation>
-<violation beginline="4" endline="4" begincolumn="45" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="ClienteNoAutorizadoException" method="ClienteNoAutorizadoException" variable="nif" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+<violation beginline="5" endline="5" begincolumn="45" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="ClienteNoAutorizadoException" method="ClienteNoAutorizadoException" variable="nif" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'nif' is not assigned and could be declared final
 </violation>
 </file>
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/exceptions/ClienteNoEncontradoException.java">
-<violation beginline="4" endline="4" begincolumn="45" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="ClienteNoEncontradoException" method="ClienteNoEncontradoException" variable="nif" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+<violation beginline="4" endline="4" begincolumn="9" endcolumn="48" rule="DefaultPackage" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="ClienteNoEncontradoException" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="5" endline="5" begincolumn="45" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="ClienteNoEncontradoException" method="ClienteNoEncontradoException" variable="nif" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'nif' is not assigned and could be declared final
 </violation>
 </file>
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/exceptions/CuentaInvalidaException.java">
+<violation beginline="4" endline="4" begincolumn="9" endcolumn="48" rule="DefaultPackage" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="CuentaInvalidaException" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
 <violation beginline="5" endline="5" begincolumn="40" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="CuentaInvalidaException" method="CuentaInvalidaException" variable="numero" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'numero' is not assigned and could be declared final
 </violation>
 </file>
+<file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/exceptions/CuentaSinTitularesException.java">
+<violation beginline="4" endline="4" begincolumn="9" endcolumn="48" rule="DefaultPackage" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="CuentaSinTitularesException" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+</file>
+<file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/exceptions/CuentaYaCreadaException.java">
+<violation beginline="4" endline="4" begincolumn="9" endcolumn="48" rule="DefaultPackage" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="CuentaYaCreadaException" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+</file>
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/exceptions/ImporteInvalidoException.java">
-<violation beginline="4" endline="4" begincolumn="41" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="ImporteInvalidoException" method="ImporteInvalidoException" variable="importe" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+<violation beginline="4" endline="4" begincolumn="9" endcolumn="48" rule="DefaultPackage" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="ImporteInvalidoException" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="5" endline="5" begincolumn="41" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="ImporteInvalidoException" method="ImporteInvalidoException" variable="importe" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'importe' is not assigned and could be declared final
 </violation>
 </file>
+<file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/exceptions/LoginException.java">
+<violation beginline="4" endline="4" begincolumn="9" endcolumn="48" rule="DefaultPackage" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="LoginException" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+</file>
+<file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/exceptions/PinInvalidoException.java">
+<violation beginline="4" endline="4" begincolumn="9" endcolumn="48" rule="DefaultPackage" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="PinInvalidoException" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+</file>
+<file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/exceptions/SaldoInsuficienteException.java">
+<violation beginline="4" endline="4" begincolumn="9" endcolumn="48" rule="DefaultPackage" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="SaldoInsuficienteException" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+</file>
+<file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/exceptions/TarjetaBloqueadaException.java">
+<violation beginline="4" endline="4" begincolumn="9" endcolumn="48" rule="DefaultPackage" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="TarjetaBloqueadaException" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+</file>
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/exceptions/TokenInvalidoException.java">
-<violation beginline="3" endline="5" begincolumn="8" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="TokenInvalidoException" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#AtLeastOneConstructor" priority="3">
+<violation beginline="3" endline="6" begincolumn="8" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="TokenInvalidoException" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#AtLeastOneConstructor" priority="3">
 Each class should declare at least one constructor
+</violation>
+<violation beginline="4" endline="4" begincolumn="9" endcolumn="48" rule="DefaultPackage" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.exceptions" class="TokenInvalidoException" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
 </violation>
 </file>
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/model/Cliente.java">
@@ -105,9 +141,6 @@ Parameter 'token' is not assigned and could be declared final
 </violation>
 </file>
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/model/Cuenta.java">
-<violation beginline="28" endline="28" begincolumn="24" endcolumn="25" rule="ShortVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
-Avoid variables with short names like id
-</violation>
 <violation beginline="39" endline="39" begincolumn="28" endcolumn="29" rule="ShortVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="Cuenta" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
 Avoid variables with short names like id
 </violation>
@@ -159,9 +192,6 @@ Avoid using if statements without curly braces
 <violation beginline="88" endline="89" begincolumn="17" endcolumn="63" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retirar" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
 Avoid using if statements without curly braces
 </violation>
-<violation beginline="90" endline="90" begincolumn="17" endcolumn="92" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retirar" variable="movimiento" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'movimiento' could be declared final
-</violation>
 <violation beginline="91" endline="91" begincolumn="17" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retirar" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
@@ -170,9 +200,6 @@ Parameter 'concepto' is not assigned and could be declared final
 </violation>
 <violation beginline="99" endline="99" begincolumn="35" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retiroForzoso" variable="importe" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'importe' is not assigned and could be declared final
-</violation>
-<violation beginline="100" endline="100" begincolumn="17" endcolumn="92" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retiroForzoso" variable="movimiento" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'movimiento' could be declared final
 </violation>
 <violation beginline="101" endline="101" begincolumn="17" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retiroForzoso" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
@@ -225,13 +252,13 @@ Found 'UR'-anomaly for variable 'm' (lines '135'-'139').
 <violation beginline="136" endline="136" begincolumn="40" endcolumn="41" rule="ShortVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" variable="mm" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
 Avoid variables with short names like mm
 </violation>
-<violation beginline="136" endline="136" begincolumn="17" endcolumn="94" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" variable="mm" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="136" endline="136" begincolumn="17" endcolumn="100" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" variable="mm" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'mm' could be declared final
 </violation>
-<violation beginline="136" endline="136" begincolumn="45" endcolumn="94" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="136" endline="136" begincolumn="45" endcolumn="100" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="136" endline="136" begincolumn="45" endcolumn="94" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="136" endline="136" begincolumn="45" endcolumn="100" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
 <violation beginline="137" endline="139" begincolumn="25" endcolumn="54" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" variable="saldo" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
@@ -288,7 +315,7 @@ Local variable 'titular' could be declared final
 <violation beginline="168" endline="168" begincolumn="29" endcolumn="64" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="173" endline="174" begincolumn="17" endcolumn="77" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
+<violation beginline="173" endline="174" begincolumn="17" endcolumn="83" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
 Avoid using if statements without curly braces
 </violation>
 <violation beginline="175" endline="175" begincolumn="17" endcolumn="59" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" variable="tarjeta" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
@@ -339,7 +366,7 @@ Local variable 'titular' could be declared final
 <violation beginline="197" endline="197" begincolumn="29" endcolumn="64" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="201" endline="202" begincolumn="17" endcolumn="77" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
+<violation beginline="201" endline="202" begincolumn="17" endcolumn="83" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
 Avoid using if statements without curly braces
 </violation>
 <violation beginline="203" endline="203" begincolumn="17" endcolumn="61" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="tarjeta" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
