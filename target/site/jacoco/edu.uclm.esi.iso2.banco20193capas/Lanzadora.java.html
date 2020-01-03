@@ -9,21 +9,21 @@ import edu.uclm.esi.iso2.banco20193capas.model.Cuenta;
 @SpringBootApplication
 <span class="nc" id="L10">public class Lanzadora {</span>
 
-	public static void main(String[] args) throws Exception {
+	public static void main(final String[] args) throws Exception {
 <span class="nc" id="L13">		SpringApplication.run(Lanzadora.class, args);</span>
 		
 		try {
-<span class="nc" id="L16">			Cliente pepe = new Cliente(&quot;12345X&quot;, &quot;Pepe&quot;, &quot;Pérez&quot;);</span>
+<span class="nc" id="L16">			final Cliente pepe = new Cliente(&quot;12345X&quot;, &quot;Pepe&quot;, &quot;Pérez&quot;);</span>
 <span class="nc" id="L17">			pepe.insert();</span>
 			
-<span class="nc" id="L19">			Cuenta cuenta = new Cuenta();</span>
+<span class="nc" id="L19">			final Cuenta cuenta = new Cuenta();</span>
 <span class="nc" id="L20">			cuenta.addTitular(pepe);</span>
 <span class="nc" id="L21">			cuenta.insert();</span>
 			
 <span class="nc" id="L23">			cuenta.ingresar(1000);</span>
 <span class="nc" id="L24">		} catch (Exception e) {</span>
 <span class="nc" id="L25">			e.printStackTrace();</span>
-<span class="nc" id="L26">		}</span>
+		}
 		
 <span class="nc" id="L28">	}</span>
 
