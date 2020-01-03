@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.6.1" timestamp="2020-01-02T23:18:10.315">
+<pmd version="5.6.1" timestamp="2020-01-04T00:32:07.959">
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/Lanzadora.java">
 <violation beginline="10" endline="30" begincolumn="24" endcolumn="1" rule="UseUtilityClass" ruleset="Design" package="edu.uclm.esi.iso2.banco20193capas" class="Lanzadora" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#UseUtilityClass" priority="3">
 All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
@@ -150,260 +150,98 @@ Parameter 'token' is not assigned and could be declared final
 </violation>
 </file>
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/model/Cuenta.java">
-<violation beginline="28" endline="28" begincolumn="24" endcolumn="25" rule="ShortVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
-Avoid variables with short names like id
-</violation>
-<violation beginline="39" endline="39" begincolumn="28" endcolumn="29" rule="ShortVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="Cuenta" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
-Avoid variables with short names like id
-</violation>
-<violation beginline="39" endline="39" begincolumn="23" endcolumn="29" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="Cuenta" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'id' is not assigned and could be declared final
-</violation>
-<violation beginline="44" endline="44" begincolumn="31" endcolumn="32" rule="ShortVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="Cuenta" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
-Avoid variables with short names like id
-</violation>
-<violation beginline="44" endline="44" begincolumn="23" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="Cuenta" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'id' is not assigned and could be declared final
-</violation>
-<violation beginline="53" endline="53" begincolumn="32" endcolumn="46" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="addTitular" variable="cliente" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'cliente' is not assigned and could be declared final
-</violation>
-<violation beginline="54" endline="55" begincolumn="17" endcolumn="60" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="addTitular" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
-Avoid using if statements without curly braces
-</violation>
-<violation beginline="64" endline="64" begincolumn="30" endcolumn="43" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="ingresar" variable="importe" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'importe' is not assigned and could be declared final
-</violation>
-<violation beginline="68" endline="68" begincolumn="47" endcolumn="61" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="ingresar" variable="concepto" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'concepto' is not assigned and could be declared final
-</violation>
-<violation beginline="68" endline="68" begincolumn="31" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="ingresar" variable="importe" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'importe' is not assigned and could be declared final
-</violation>
-<violation beginline="69" endline="70" begincolumn="17" endcolumn="68" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="ingresar" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
-Avoid using if statements without curly braces
-</violation>
-<violation beginline="71" endline="71" begincolumn="17" endcolumn="91" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="ingresar" variable="movimiento" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'movimiento' could be declared final
-</violation>
-<violation beginline="72" endline="72" begincolumn="17" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="ingresar" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="74" endline="74" begincolumn="17" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="ingresar" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="81" endline="81" begincolumn="29" endcolumn="42" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retirar" variable="importe" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'importe' is not assigned and could be declared final
-</violation>
-<violation beginline="85" endline="85" begincolumn="46" endcolumn="60" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retirar" variable="concepto" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'concepto' is not assigned and could be declared final
-</violation>
-<violation beginline="85" endline="85" begincolumn="30" endcolumn="43" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retirar" variable="importe" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'importe' is not assigned and could be declared final
-</violation>
-<violation beginline="86" endline="87" begincolumn="17" endcolumn="68" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retirar" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
-Avoid using if statements without curly braces
-</violation>
-<violation beginline="88" endline="89" begincolumn="17" endcolumn="63" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retirar" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
-Avoid using if statements without curly braces
-</violation>
-<violation beginline="90" endline="90" begincolumn="17" endcolumn="92" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retirar" variable="movimiento" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'movimiento' could be declared final
-</violation>
-<violation beginline="91" endline="91" begincolumn="17" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retirar" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="95" endline="95" begincolumn="17" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retirar" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="99" endline="99" begincolumn="51" endcolumn="65" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retiroForzoso" variable="concepto" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'concepto' is not assigned and could be declared final
-</violation>
-<violation beginline="99" endline="99" begincolumn="35" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retiroForzoso" variable="importe" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'importe' is not assigned and could be declared final
-</violation>
-<violation beginline="100" endline="100" begincolumn="17" endcolumn="92" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retiroForzoso" variable="movimiento" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'movimiento' could be declared final
-</violation>
-<violation beginline="101" endline="101" begincolumn="17" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retiroForzoso" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="105" endline="105" begincolumn="17" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="retiroForzoso" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="114" endline="114" begincolumn="37" endcolumn="55" rule="LongVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="transferir" variable="numeroCuentaDestino" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#LongVariable" priority="3">
+<violation beginline="118" endline="118" begincolumn="43" endcolumn="61" rule="LongVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="transferir" variable="numeroCuentaDestino" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#LongVariable" priority="3">
 Avoid excessively long variable names like numeroCuentaDestino
 </violation>
-<violation beginline="114" endline="114" begincolumn="74" endcolumn="88" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="transferir" variable="concepto" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'concepto' is not assigned and could be declared final
-</violation>
-<violation beginline="114" endline="114" begincolumn="58" endcolumn="71" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="transferir" variable="importe" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'importe' is not assigned and could be declared final
-</violation>
-<violation beginline="114" endline="114" begincolumn="32" endcolumn="55" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="transferir" variable="numeroCuentaDestino" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'numeroCuentaDestino' is not assigned and could be declared final
-</violation>
-<violation beginline="115" endline="116" begincolumn="17" endcolumn="79" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="transferir" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
-Avoid using if statements without curly braces
-</violation>
-<violation beginline="118" endline="118" begincolumn="17" endcolumn="61" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="transferir" variable="comision" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'comision' could be declared final
-</violation>
-<violation beginline="120" endline="120" begincolumn="17" endcolumn="63" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="transferir" variable="destino" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'destino' could be declared final
-</violation>
-<violation beginline="121" endline="121" begincolumn="17" endcolumn="67" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="transferir" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="126" endline="126" begincolumn="17" endcolumn="67" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="transferir" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="124" endline="124" begincolumn="29" endcolumn="39" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="load" variable="numero" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'numero' is not assigned and could be declared final
-</violation>
-<violation beginline="125" endline="125" begincolumn="17" endcolumn="84" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="load" variable="optCuenta" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'optCuenta' could be declared final
-</violation>
-<violation beginline="125" endline="125" begincolumn="46" endcolumn="84" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="load" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="130" endline="130" begincolumn="52" endcolumn="90" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="load" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="126" endline="127" begincolumn="17" endcolumn="66" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="load" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
-Avoid using if statements without curly braces
-</violation>
-<violation beginline="126" endline="126" begincolumn="22" endcolumn="42" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="load" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="131" endline="131" begincolumn="22" endcolumn="42" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="load" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="128" endline="128" begincolumn="24" endcolumn="38" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="load" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="134" endline="134" begincolumn="24" endcolumn="38" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="load" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="135" endline="139" begincolumn="25" endcolumn="54" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" variable="m" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 'm' (lines '135'-'139').
+<violation beginline="141" endline="145" begincolumn="25" endcolumn="54" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" variable="m" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'm' (lines '141'-'145').
 </violation>
-<violation beginline="136" endline="136" begincolumn="40" endcolumn="41" rule="ShortVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" variable="mm" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+<violation beginline="142" endline="142" begincolumn="46" endcolumn="47" rule="ShortVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" variable="mm" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
 Avoid variables with short names like mm
 </violation>
-<violation beginline="136" endline="136" begincolumn="17" endcolumn="94" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" variable="mm" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'mm' could be declared final
-</violation>
-<violation beginline="136" endline="136" begincolumn="45" endcolumn="94" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="142" endline="142" begincolumn="51" endcolumn="106" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="136" endline="136" begincolumn="45" endcolumn="94" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="142" endline="142" begincolumn="51" endcolumn="106" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="137" endline="139" begincolumn="25" endcolumn="54" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" variable="saldo" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'saldo' (lines '137'-'139').
+<violation beginline="143" endline="145" begincolumn="25" endcolumn="54" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" variable="saldo" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'saldo' (lines '143'-'145').
 </violation>
-<violation beginline="138" endline="139" begincolumn="17" endcolumn="55" rule="ForLoopsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#ForLoopsMustUseBraces" priority="3">
-Avoid using for statements without curly braces
-</violation>
-<violation beginline="138" endline="138" begincolumn="22" endcolumn="39" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="getSaldo" variable="m" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'm' could be declared final
-</violation>
-<violation beginline="148" endline="149" begincolumn="17" endcolumn="64" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="insert" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
-Avoid using if statements without curly braces
-</violation>
-<violation beginline="151" endline="151" begincolumn="17" endcolumn="49" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="insert" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="159" endline="159" begincolumn="17" endcolumn="49" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="insert" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="161" endline="168" begincolumn="29" endcolumn="64" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" variable="titular" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 'titular' (lines '161'-'168').
+<violation beginline="169" endline="177" begincolumn="29" endcolumn="64" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" variable="titular" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'titular' (lines '169'-'177').
 </violation>
-<violation beginline="161" endline="161" begincolumn="50" endcolumn="59" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" variable="nif" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'nif' is not assigned and could be declared final
+<violation beginline="170" endline="170" begincolumn="54" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="162" endline="162" begincolumn="17" endcolumn="85" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" variable="optCliente" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+<violation beginline="171" endline="171" begincolumn="22" endcolumn="43" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="174" endline="190" begincolumn="31" endcolumn="56" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" variable="cliente" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'cliente' (lines '174'-'190').
+</violation>
+<violation beginline="174" endline="174" begincolumn="41" endcolumn="56" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="175" endline="178" begincolumn="33" endcolumn="49" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" variable="encontrado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'encontrado' (lines '175'-'178').
+</violation>
+<violation beginline="177" endline="177" begincolumn="29" endcolumn="64" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="188" endline="188" begincolumn="17" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="200" endline="208" begincolumn="29" endcolumn="64" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="titular" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'titular' (lines '200'-'208').
+</violation>
+<violation beginline="201" endline="201" begincolumn="17" endcolumn="85" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="optCliente" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'optCliente' could be declared final
 </violation>
-<violation beginline="162" endline="162" begincolumn="48" endcolumn="85" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="201" endline="201" begincolumn="48" endcolumn="85" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="163" endline="164" begincolumn="17" endcolumn="68" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
-Avoid using if statements without curly braces
-</violation>
-<violation beginline="163" endline="163" begincolumn="22" endcolumn="43" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="202" endline="202" begincolumn="22" endcolumn="43" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="165" endline="180" begincolumn="25" endcolumn="50" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" variable="cliente" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'cliente' (lines '165'-'180').
+<violation beginline="205" endline="222" begincolumn="31" endcolumn="56" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="cliente" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'cliente' (lines '205'-'222').
 </violation>
-<violation beginline="165" endline="165" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" variable="cliente" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'cliente' could be declared final
-</violation>
-<violation beginline="165" endline="165" begincolumn="35" endcolumn="50" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="205" endline="205" begincolumn="41" endcolumn="56" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
-<violation beginline="166" endline="169" begincolumn="33" endcolumn="49" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" variable="encontrado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'encontrado' (lines '166'-'169').
+<violation beginline="206" endline="209" begincolumn="33" endcolumn="49" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="encontrado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'encontrado' (lines '206'-'209').
 </violation>
-<violation beginline="167" endline="171" begincolumn="17" endcolumn="25" rule="ForLoopsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#ForLoopsMustUseBraces" priority="3">
-Avoid using for statements without curly braces
-</violation>
-<violation beginline="167" endline="167" begincolumn="22" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" variable="titular" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'titular' could be declared final
-</violation>
-<violation beginline="168" endline="168" begincolumn="29" endcolumn="64" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="208" endline="208" begincolumn="29" endcolumn="64" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
 </violation>
-<violation beginline="173" endline="174" begincolumn="17" endcolumn="77" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
-Avoid using if statements without curly braces
-</violation>
-<violation beginline="175" endline="175" begincolumn="17" endcolumn="59" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" variable="tarjeta" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'tarjeta' could be declared final
-</violation>
-<violation beginline="178" endline="178" begincolumn="17" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaDebito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+<violation beginline="220" endline="220" begincolumn="17" endcolumn="60" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
-</violation>
-<violation beginline="190" endline="197" begincolumn="29" endcolumn="64" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="titular" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'UR'-anomaly for variable 'titular' (lines '190'-'197').
-</violation>
-<violation beginline="190" endline="190" begincolumn="64" endcolumn="77" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="credito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'credito' is not assigned and could be declared final
-</violation>
-<violation beginline="190" endline="190" begincolumn="52" endcolumn="61" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="nif" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'nif' is not assigned and could be declared final
-</violation>
-<violation beginline="191" endline="191" begincolumn="17" endcolumn="85" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="optCliente" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'optCliente' could be declared final
-</violation>
-<violation beginline="191" endline="191" begincolumn="48" endcolumn="85" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
-Potential violation of Law of Demeter (method chain calls)
-</violation>
-<violation beginline="192" endline="193" begincolumn="17" endcolumn="68" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
-Avoid using if statements without curly braces
-</violation>
-<violation beginline="192" endline="192" begincolumn="22" endcolumn="43" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
-Potential violation of Law of Demeter (object not created locally)
-</violation>
-<violation beginline="194" endline="209" begincolumn="25" endcolumn="50" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="cliente" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DU'-anomaly for variable 'cliente' (lines '194'-'209').
-</violation>
-<violation beginline="194" endline="194" begincolumn="17" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="cliente" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'cliente' could be declared final
-</violation>
-<violation beginline="194" endline="194" begincolumn="35" endcolumn="50" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
-Potential violation of Law of Demeter (object not created locally)
-</violation>
-<violation beginline="195" endline="198" begincolumn="33" endcolumn="49" rule="DataflowAnomalyAnalysis" ruleset="Controversial" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="encontrado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
-Found 'DD'-anomaly for variable 'encontrado' (lines '195'-'198').
-</violation>
-<violation beginline="196" endline="200" begincolumn="17" endcolumn="25" rule="ForLoopsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#ForLoopsMustUseBraces" priority="3">
-Avoid using for statements without curly braces
-</violation>
-<violation beginline="196" endline="196" begincolumn="22" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="titular" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'titular' could be declared final
-</violation>
-<violation beginline="197" endline="197" begincolumn="29" endcolumn="64" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
-Potential violation of Law of Demeter (method chain calls)
-</violation>
-<violation beginline="201" endline="202" begincolumn="17" endcolumn="77" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
-Avoid using if statements without curly braces
-</violation>
-<violation beginline="203" endline="203" begincolumn="17" endcolumn="61" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" variable="tarjeta" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
-Local variable 'tarjeta' could be declared final
-</violation>
-<violation beginline="207" endline="207" begincolumn="17" endcolumn="60" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
-Potential violation of Law of Demeter (method chain calls)
-</violation>
-<violation beginline="215" endline="215" begincolumn="32" endcolumn="33" rule="ShortVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="setId" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
-Avoid variables with short names like id
-</violation>
-<violation beginline="215" endline="215" begincolumn="27" endcolumn="33" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="setId" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'id' is not assigned and could be declared final
-</violation>
-<violation beginline="223" endline="223" begincolumn="34" endcolumn="56" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="setTitulares" variable="titulares" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'titulares' is not assigned and could be declared final
-</violation>
-<violation beginline="231" endline="231" begincolumn="31" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="setCreada" variable="creada" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'creada' is not assigned and could be declared final
 </violation>
 </file>
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/model/Manager.java">
