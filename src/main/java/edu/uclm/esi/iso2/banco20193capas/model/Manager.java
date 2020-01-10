@@ -15,48 +15,48 @@ import edu.uclm.esi.iso2.banco20193capas.dao.TarjetaDebitoDAO;
  *
  */
 @Component
-public class Manager {
+public final class Manager {
 	private static CuentaDAO cuentaDAO;
 	private static MovimientoCuentaDAO movimientoDAO;
-	private static MovimientoTarjetaCreditoDAO movimientoTarjetaCreditoDAO;
+	private static MovimientoTarjetaCreditoDAO movTCredDAO;
 	private static ClienteDAO clienteDAO;
 	private static TarjetaDebitoDAO tarjetaDebitoDAO;
 	private static TarjetaCreditoDAO tarjetaCreditoDAO;
-	
+
 	private Manager() {	}
-	
+
 	@Autowired
-	private void loadDAO(CuentaDAO cuentaDao, MovimientoCuentaDAO movimientoDao, 
-			ClienteDAO clienteDAO, MovimientoTarjetaCreditoDAO movimientoTCDAO, TarjetaDebitoDAO tarjetaDebitoDAO,
+	private void loadDAO(final CuentaDAO cuentaDao,final MovimientoCuentaDAO movimientoDao,final 
+			ClienteDAO clienteDAO,final MovimientoTarjetaCreditoDAO movimientoTCDAO,final TarjetaDebitoDAO tarjetaDebitoDAO,final
 			TarjetaCreditoDAO tarjetaCreditoDAO) {
 		Manager.cuentaDAO = cuentaDao;
 		Manager.movimientoDAO = movimientoDao;
 		Manager.clienteDAO = clienteDAO;
-		Manager.movimientoTarjetaCreditoDAO = movimientoTCDAO;
+		Manager.movTCredDAO = movimientoTCDAO;
 		Manager.tarjetaDebitoDAO = tarjetaDebitoDAO;
 		Manager.tarjetaCreditoDAO = tarjetaCreditoDAO;
 	}
-	
+
 	public static CuentaDAO getCuentaDAO() {
 		return cuentaDAO;
 	}
-	
+
 	public static MovimientoCuentaDAO getMovimientoDAO() {
 		return movimientoDAO;
 	}
-	
+
 	public static ClienteDAO getClienteDAO() {
 		return clienteDAO;
 	}
-	
+
 	public static MovimientoTarjetaCreditoDAO getMovimientoTarjetaCreditoDAO() {
-		return movimientoTarjetaCreditoDAO;
+		return movTCredDAO;
 	}
-	
+
 	public static TarjetaDebitoDAO getTarjetaDebitoDAO() {
 		return tarjetaDebitoDAO;
 	}
-	
+
 	public static TarjetaCreditoDAO getTarjetaCreditoDAO() {
 		return tarjetaCreditoDAO;
 	}

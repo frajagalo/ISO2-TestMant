@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.6.1" timestamp="2020-01-10T22:34:32.032">
+<pmd version="5.6.1" timestamp="2020-01-10T22:42:58.547">
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/Lanzadora.java">
 <violation beginline="10" endline="30" begincolumn="24" endcolumn="1" rule="UseUtilityClass" ruleset="Design" package="edu.uclm.esi.iso2.banco20193capas" class="Lanzadora" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#UseUtilityClass" priority="3">
 All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
@@ -184,32 +184,6 @@ Potential violation of Law of Demeter (method chain calls)
 </violation>
 <violation beginline="220" endline="220" begincolumn="17" endcolumn="60" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
-</violation>
-</file>
-<file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/model/Manager.java">
-<violation beginline="18" endline="63" begincolumn="8" endcolumn="1" rule="ClassWithOnlyPrivateConstructorsShouldBeFinal" ruleset="Design" package="edu.uclm.esi.iso2.banco20193capas.model" class="Manager" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#ClassWithOnlyPrivateConstructorsShouldBeFinal" priority="1">
-A class which only has private constructors should be final
-</violation>
-<violation beginline="21" endline="21" begincolumn="52" endcolumn="78" rule="LongVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="Manager" variable="movimientoTarjetaCreditoDAO" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#LongVariable" priority="3">
-Avoid excessively long variable names like movimientoTarjetaCreditoDAO
-</violation>
-<violation beginline="29" endline="29" begincolumn="30" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Manager" method="loadDAO" variable="cuentaDao" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'cuentaDao' is not assigned and could be declared final
-</violation>
-<violation beginline="29" endline="29" begincolumn="51" endcolumn="83" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Manager" method="loadDAO" variable="movimientoDao" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'movimientoDao' is not assigned and could be declared final
-</violation>
-<violation beginline="30" endline="30" begincolumn="25" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Manager" method="loadDAO" variable="clienteDAO" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'clienteDAO' is not assigned and could be declared final
-</violation>
-<violation beginline="30" endline="30" begincolumn="48" endcolumn="90" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Manager" method="loadDAO" variable="movimientoTCDAO" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'movimientoTCDAO' is not assigned and could be declared final
-</violation>
-<violation beginline="30" endline="30" begincolumn="93" endcolumn="125" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Manager" method="loadDAO" variable="tarjetaDebitoDAO" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'tarjetaDebitoDAO' is not assigned and could be declared final
-</violation>
-<violation beginline="31" endline="31" begincolumn="25" endcolumn="59" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="Manager" method="loadDAO" variable="tarjetaCreditoDAO" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'tarjetaCreditoDAO' is not assigned and could be declared final
 </violation>
 </file>
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/model/MovimientoCuenta.java">
