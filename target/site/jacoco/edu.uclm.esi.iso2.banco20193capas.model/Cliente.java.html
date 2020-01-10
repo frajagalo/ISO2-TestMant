@@ -9,59 +9,55 @@ import javax.persistence.Id;
 @Entity
 public class Cliente {
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private Long idCliente;
 	@Column(unique = true)
 	protected String nif;
 	
 	private String nombre;
 	private String apellidos;
 
-	
-<span class="nc" id="L20">	public Cliente() {</span>
-<span class="nc" id="L21">	}</span>
-	
 	/**
 	 * Crea un cliente 
 	 * @param nif	NIF del cliente
 	 * @param nombre	Nombre del cliente
 	 * @param apellidos	Apellidos del cliente
 	 */
-<span class="nc" id="L29">	public Cliente(String nif, String nombre, String apellidos) {</span>
-<span class="nc" id="L30">		this.nif = nif;</span>
-<span class="nc" id="L31">		this.nombre = nombre;</span>
-<span class="nc" id="L32">		this.apellidos = apellidos;</span>
-<span class="nc" id="L33">	}</span>
+<span class="nc" id="L25">	public Cliente(final String nif,final String nombre,final String apellidos) {</span>
+<span class="nc" id="L26">		this.nif = nif;</span>
+<span class="nc" id="L27">		this.nombre = nombre;</span>
+<span class="nc" id="L28">		this.apellidos = apellidos;</span>
+<span class="nc" id="L29">	}</span>
 
 	public Long getId() {
-<span class="nc" id="L36">		return id;</span>
+<span class="nc" id="L32">		return idCliente;</span>
 	}
-	public void setId(Long id) {
-<span class="nc" id="L39">		this.id = id;</span>
-<span class="nc" id="L40">	}</span>
+	public void setId(final Long idCliente) {
+<span class="nc" id="L35">		this.idCliente = idCliente;</span>
+<span class="nc" id="L36">	}</span>
 	public String getNif() {
-<span class="nc" id="L42">		return nif;</span>
+<span class="nc" id="L38">		return nif;</span>
 	}
-	public void setNif(String nif) {
-<span class="nc" id="L45">		this.nif = nif;</span>
-<span class="nc" id="L46">	}</span>
+	public void setNif(final String nif) {
+<span class="nc" id="L41">		this.nif = nif;</span>
+<span class="nc" id="L42">	}</span>
 	public String getNombre() {
-<span class="nc" id="L48">		return nombre;</span>
+<span class="nc" id="L44">		return nombre;</span>
 	}
-	public void setNombre(String nombre) {
-<span class="nc" id="L51">		this.nombre = nombre;</span>
-<span class="nc" id="L52">	}</span>
+	public void setNombre(final String nombre) {
+<span class="nc" id="L47">		this.nombre = nombre;</span>
+<span class="nc" id="L48">	}</span>
 	public String getApellidos() {
-<span class="nc" id="L54">		return apellidos;</span>
+<span class="nc" id="L50">		return apellidos;</span>
 	}
-	public void setApellidos(String apellidos) {
-<span class="nc" id="L57">		this.apellidos = apellidos;</span>
-<span class="nc" id="L58">	}</span>
+	public void setApellidos(final String apellidos) {
+<span class="nc" id="L53">		this.apellidos = apellidos;</span>
+<span class="nc" id="L54">	}</span>
 	
 	/**
 	 * Inserta un cliente en la base de datos
 	 */
 	public void insert() {
-<span class="nc" id="L64">		Manager.getClienteDAO().save(this);</span>
-<span class="nc" id="L65">	}</span>
+<span class="nc" id="L60">		Manager.getClienteDAO().save(this);</span>
+<span class="nc" id="L61">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
