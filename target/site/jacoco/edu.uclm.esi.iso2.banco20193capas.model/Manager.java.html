@@ -15,48 +15,48 @@ import edu.uclm.esi.iso2.banco20193capas.dao.TarjetaDebitoDAO;
  *
  */
 @Component
-public class Manager {
+public final class Manager {
 	private static CuentaDAO cuentaDAO;
 	private static MovimientoCuentaDAO movimientoDAO;
-	private static MovimientoTarjetaCreditoDAO movimientoTarjetaCreditoDAO;
+	private static MovimientoTarjetaCreditoDAO movTCredDAO;
 	private static ClienteDAO clienteDAO;
 	private static TarjetaDebitoDAO tarjetaDebitoDAO;
 	private static TarjetaCreditoDAO tarjetaCreditoDAO;
-	
+
 <span class="nc" id="L26">	private Manager() {	}</span>
-	
+
 	@Autowired
-	private void loadDAO(CuentaDAO cuentaDao, MovimientoCuentaDAO movimientoDao, 
-			ClienteDAO clienteDAO, MovimientoTarjetaCreditoDAO movimientoTCDAO, TarjetaDebitoDAO tarjetaDebitoDAO,
+	private void loadDAO(final CuentaDAO cuentaDao,final MovimientoCuentaDAO movimientoDao,final 
+			ClienteDAO clienteDAO,final MovimientoTarjetaCreditoDAO movimientoTCDAO,final TarjetaDebitoDAO tarjetaDebitoDAO,final
 			TarjetaCreditoDAO tarjetaCreditoDAO) {
 <span class="nc" id="L32">		Manager.cuentaDAO = cuentaDao;</span>
 <span class="nc" id="L33">		Manager.movimientoDAO = movimientoDao;</span>
 <span class="nc" id="L34">		Manager.clienteDAO = clienteDAO;</span>
-<span class="nc" id="L35">		Manager.movimientoTarjetaCreditoDAO = movimientoTCDAO;</span>
+<span class="nc" id="L35">		Manager.movTCredDAO = movimientoTCDAO;</span>
 <span class="nc" id="L36">		Manager.tarjetaDebitoDAO = tarjetaDebitoDAO;</span>
 <span class="nc" id="L37">		Manager.tarjetaCreditoDAO = tarjetaCreditoDAO;</span>
 <span class="nc" id="L38">	}</span>
-	
+
 	public static CuentaDAO getCuentaDAO() {
 <span class="nc" id="L41">		return cuentaDAO;</span>
 	}
-	
+
 	public static MovimientoCuentaDAO getMovimientoDAO() {
 <span class="nc" id="L45">		return movimientoDAO;</span>
 	}
-	
+
 	public static ClienteDAO getClienteDAO() {
 <span class="nc" id="L49">		return clienteDAO;</span>
 	}
-	
+
 	public static MovimientoTarjetaCreditoDAO getMovimientoTarjetaCreditoDAO() {
-<span class="nc" id="L53">		return movimientoTarjetaCreditoDAO;</span>
+<span class="nc" id="L53">		return movTCredDAO;</span>
 	}
-	
+
 	public static TarjetaDebitoDAO getTarjetaDebitoDAO() {
 <span class="nc" id="L57">		return tarjetaDebitoDAO;</span>
 	}
-	
+
 	public static TarjetaCreditoDAO getTarjetaCreditoDAO() {
 <span class="nc" id="L61">		return tarjetaCreditoDAO;</span>
 	}
