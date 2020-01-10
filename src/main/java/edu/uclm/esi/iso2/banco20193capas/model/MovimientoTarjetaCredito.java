@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class MovimientoTarjetaCredito {
 	@Id @GeneratedValue(strategy = GenerationType.AUTO) 
-	private Long id;
+	private Long idTarjeta;
 	@ManyToOne
 	private TarjetaCredito tarjeta;
 	
@@ -21,28 +21,26 @@ public class MovimientoTarjetaCredito {
 	private String concepto;
 	private boolean liquidado;
 	
-	public MovimientoTarjetaCredito() {
-	}
 
-	public MovimientoTarjetaCredito(TarjetaCredito tarjeta, double importe, String concepto) {
+	public MovimientoTarjetaCredito(final TarjetaCredito tarjeta,final double importe,final String concepto) {
 		this.importe = importe;
 		this.concepto = concepto;
 		this.tarjeta = tarjeta;
 	}
 
 	public Long getId() {
-		return id;
+		return idTarjeta;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(final Long idTarjeta) {
+		this.idTarjeta = idTarjeta;
 	}
 
 	public TarjetaCredito getTarjeta() {
 		return tarjeta;
 	}
 
-	public void setTarjeta(TarjetaCredito tarjeta) {
+	public void setTarjeta(final TarjetaCredito tarjeta) {
 		this.tarjeta = tarjeta;
 	}
 
@@ -50,7 +48,7 @@ public class MovimientoTarjetaCredito {
 		return importe;
 	}
 
-	public void setImporte(double importe) {
+	public void setImporte(final double importe) {
 		this.importe = importe;
 	}
 
@@ -58,7 +56,7 @@ public class MovimientoTarjetaCredito {
 		return concepto;
 	}
 
-	public void setConcepto(String concepto) {
+	public void setConcepto(final String concepto) {
 		this.concepto = concepto;
 	}
 
@@ -66,7 +64,7 @@ public class MovimientoTarjetaCredito {
 		return liquidado;
 	}
 
-	public void setLiquidado(boolean liquidado) {
+	public void setLiquidado(final boolean liquidado) {
 		this.liquidado = liquidado;
 	}
 	

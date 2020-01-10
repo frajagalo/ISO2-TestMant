@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.6.1" timestamp="2020-01-10T22:52:35.820">
+<pmd version="5.6.1" timestamp="2020-01-10T23:01:49.377">
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/Lanzadora.java">
 <violation beginline="10" endline="30" begincolumn="24" endcolumn="1" rule="UseUtilityClass" ruleset="Design" package="edu.uclm.esi.iso2.banco20193capas" class="Lanzadora" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#UseUtilityClass" priority="3">
 All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
@@ -184,41 +184,6 @@ Potential violation of Law of Demeter (method chain calls)
 </violation>
 <violation beginline="220" endline="220" begincolumn="17" endcolumn="60" rule="LawOfDemeter" ruleset="Coupling" package="edu.uclm.esi.iso2.banco20193capas.model" class="Cuenta" method="emitirTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
 Potential violation of Law of Demeter (method chain calls)
-</violation>
-</file>
-<file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/model/MovimientoTarjetaCredito.java">
-<violation beginline="16" endline="16" begincolumn="22" endcolumn="23" rule="ShortVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="MovimientoTarjetaCredito" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
-Avoid variables with short names like id
-</violation>
-<violation beginline="24" endline="25" begincolumn="16" endcolumn="9" rule="UncommentedEmptyConstructor" ruleset="Design" package="edu.uclm.esi.iso2.banco20193capas.model" class="MovimientoTarjetaCredito" method="MovimientoTarjetaCredito" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/design.html#UncommentedEmptyConstructor" priority="3">
-Document empty constructor
-</violation>
-<violation beginline="27" endline="27" begincolumn="81" endcolumn="95" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="MovimientoTarjetaCredito" method="MovimientoTarjetaCredito" variable="concepto" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'concepto' is not assigned and could be declared final
-</violation>
-<violation beginline="27" endline="27" begincolumn="65" endcolumn="78" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="MovimientoTarjetaCredito" method="MovimientoTarjetaCredito" variable="importe" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'importe' is not assigned and could be declared final
-</violation>
-<violation beginline="27" endline="27" begincolumn="41" endcolumn="62" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="MovimientoTarjetaCredito" method="MovimientoTarjetaCredito" variable="tarjeta" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'tarjeta' is not assigned and could be declared final
-</violation>
-<violation beginline="37" endline="37" begincolumn="32" endcolumn="33" rule="ShortVariable" ruleset="Naming" package="edu.uclm.esi.iso2.banco20193capas.model" class="MovimientoTarjetaCredito" method="setId" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
-Avoid variables with short names like id
-</violation>
-<violation beginline="37" endline="37" begincolumn="27" endcolumn="33" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="MovimientoTarjetaCredito" method="setId" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'id' is not assigned and could be declared final
-</violation>
-<violation beginline="45" endline="45" begincolumn="32" endcolumn="53" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="MovimientoTarjetaCredito" method="setTarjeta" variable="tarjeta" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'tarjeta' is not assigned and could be declared final
-</violation>
-<violation beginline="53" endline="53" begincolumn="32" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="MovimientoTarjetaCredito" method="setImporte" variable="importe" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'importe' is not assigned and could be declared final
-</violation>
-<violation beginline="61" endline="61" begincolumn="33" endcolumn="47" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="MovimientoTarjetaCredito" method="setConcepto" variable="concepto" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'concepto' is not assigned and could be declared final
-</violation>
-<violation beginline="69" endline="69" begincolumn="34" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="edu.uclm.esi.iso2.banco20193capas.model" class="MovimientoTarjetaCredito" method="setLiquidado" variable="liquidado" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
-Parameter 'liquidado' is not assigned and could be declared final
 </violation>
 </file>
 <file name="/Users/kiko/dev/github/ISO2-TestMant/src/main/java/edu/uclm/esi/iso2/banco20193capas/model/Tarjeta.java">
