@@ -9,9 +9,9 @@
 <a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> edu.uclm.esi.iso2.banco20193capas.exceptions;
 <a class="jxr_linenumber" name="L2" href="#L2">2</a>   
 <a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="ClienteNoAutorizadoException" href="../../../../../../edu/uclm/esi/iso2/banco20193capas/exceptions/ClienteNoAutorizadoException.html#ClienteNoAutorizadoException">ClienteNoAutorizadoException</a> <strong class="jxr_keyword">extends</strong> Exception {
-<a class="jxr_linenumber" name="L4" href="#L4">4</a>   	<strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> serialVersionUID = 1L;
-<a class="jxr_linenumber" name="L5" href="#L5">5</a>   	<strong class="jxr_keyword">public</strong> <a name="ClienteNoAutorizadoException" href="../../../../../../edu/uclm/esi/iso2/banco20193capas/exceptions/ClienteNoAutorizadoException.html#ClienteNoAutorizadoException">ClienteNoAutorizadoException</a>(String nif, Long id) {
-<a class="jxr_linenumber" name="L6" href="#L6">6</a>   		<strong class="jxr_keyword">super</strong>(<span class="jxr_string">"El cliente con NIF "</span> + nif + <span class="jxr_string">" no está autorizado para operar en la cuenta "</span> + id);
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> serialVersionUID = 1L;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   	<strong class="jxr_keyword">public</strong> <a name="ClienteNoAutorizadoException" href="../../../../../../edu/uclm/esi/iso2/banco20193capas/exceptions/ClienteNoAutorizadoException.html#ClienteNoAutorizadoException">ClienteNoAutorizadoException</a>(<strong class="jxr_keyword">final</strong> String nif,<strong class="jxr_keyword">final</strong> Long idCliente) {
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   		<strong class="jxr_keyword">super</strong>(<span class="jxr_string">"El cliente con NIF "</span> + nif + <span class="jxr_string">" no está autorizado para operar en la cuenta "</span> + idCliente);
 <a class="jxr_linenumber" name="L7" href="#L7">7</a>   	}
 <a class="jxr_linenumber" name="L8" href="#L8">8</a>   }
 </pre>
