@@ -11,7 +11,7 @@ import edu.uclm.esi.iso2.banco20193capas.exceptions.SaldoInsuficienteException;
 import edu.uclm.esi.iso2.banco20193capas.exceptions.TarjetaBloqueadaException;
 
 @Entity
-public class TarjetaCredito extends Tarjeta {
+public class TarjetaCredito extends AbstractTarjeta {
 	private Double credito;
 	
 	public TarjetaCredito() {
@@ -98,7 +98,7 @@ public class TarjetaCredito extends Tarjeta {
 	
 	public void liquidar() {
 		double gastos = 0.0;
-		List<MovimientoTarjetaCredito> mm = Manager.getMovimientoTarjetaCreditoDAO().findByTarjetaId(this.id);
+		List<MovimientoTarjetaCredito> mm = Manager.getMovimientoTarjetaCreditoDAO().findByTarjetaId(this.idTarjeta);
 		for (MovimientoTarjetaCredito m : mm) {
 			if (!m.isLiquidado()) {
 				gastos = gastos+m.getImporte();
@@ -115,7 +115,7 @@ public class TarjetaCredito extends Tarjeta {
 	
 	public Double getCreditoDisponible() {
 		double gastos = 0.0;
-		List<MovimientoTarjetaCredito> mm = Manager.getMovimientoTarjetaCreditoDAO().findByTarjetaId(this.id);
+		List<MovimientoTarjetaCredito> mm = Manager.getMovimientoTarjetaCreditoDAO().findByTarjetaId(this.idTarjeta);
 		for (MovimientoTarjetaCredito m : mm)
 			if (!m.isLiquidado())
 				gastos = gastos + m.getImporte();
