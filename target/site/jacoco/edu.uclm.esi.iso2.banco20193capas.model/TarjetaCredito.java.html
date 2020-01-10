@@ -13,11 +13,11 @@ import edu.uclm.esi.iso2.banco20193capas.exceptions.TarjetaBloqueadaException;
 @Entity
 public class TarjetaCredito extends AbstractTarjeta {
 	private Double credito;
-	
+
 	public TarjetaCredito() {
 <span class="nc" id="L18">		super();</span>
 <span class="nc" id="L19">	}</span>
-	
+
 	/**
 	 * Permite sacar dinero del cajero automático
 	 * @param pin	El pin que introduce el usuario
@@ -28,20 +28,22 @@ public class TarjetaCredito extends AbstractTarjeta {
 	 * @throws PinInvalidoException	Si el pin introducido es distinto del pin de la tarjeta
 	 */
 	@Override
-	public void sacarDinero(int pin, double importe) throws ImporteInvalidoException, SaldoInsuficienteException, TarjetaBloqueadaException, PinInvalidoException {
+	public void sacarDinero(final int pin,final double importe) throws ImporteInvalidoException, SaldoInsuficienteException, TarjetaBloqueadaException, PinInvalidoException {
 <span class="nc" id="L32">		comprobar(pin);</span>
 <span class="nc" id="L33">		this.intentos = 0;</span>
-<span class="nc bnc" id="L34" title="All 2 branches missed.">		if (importe&gt;getCreditoDisponible())</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">		if (importe&gt;getCreditoDisponible()) {</span>
 <span class="nc" id="L35">			throw new SaldoInsuficienteException();</span>
-<span class="nc bnc" id="L36" title="All 2 branches missed.">		if (importe&lt;=0)</span>
-<span class="nc" id="L37">			throw new ImporteInvalidoException(importe);</span>
-<span class="nc" id="L38">		MovimientoTarjetaCredito principal = new MovimientoTarjetaCredito(this, importe, &quot;Retirada de efectivo&quot;);</span>
-<span class="nc" id="L39">		double comision = 3;</span>
-<span class="nc" id="L40">		MovimientoTarjetaCredito mComision = new MovimientoTarjetaCredito(this, comision, &quot;Comisión por retirada de efectivo&quot;);</span>
-<span class="nc" id="L41">		Manager.getMovimientoTarjetaCreditoDAO().save(principal);</span>
-<span class="nc" id="L42">		Manager.getMovimientoTarjetaCreditoDAO().save(mComision);</span>
-<span class="nc" id="L43">	}</span>
-	
+		}
+<span class="nc bnc" id="L37" title="All 2 branches missed.">		if (importe&lt;=0) {</span>
+<span class="nc" id="L38">			throw new ImporteInvalidoException(importe);</span>
+		}
+<span class="nc" id="L40">		final MovimientoTarjetaCredito principal = new MovimientoTarjetaCredito(this, importe, &quot;Retirada de efectivo&quot;);</span>
+<span class="nc" id="L41">		final double comision = 3;</span>
+<span class="nc" id="L42">		final MovimientoTarjetaCredito mComision = new MovimientoTarjetaCredito(this, comision, &quot;Comisión por retirada de efectivo&quot;);</span>
+<span class="nc" id="L43">		Manager.getMovimientoTarjetaCreditoDAO().save(principal);</span>
+<span class="nc" id="L44">		Manager.getMovimientoTarjetaCreditoDAO().save(mComision);</span>
+<span class="nc" id="L45">	}</span>
+
 	/**
 	 * Inicia una compra por Internet, que debe confirmarse después (ver {@link #confirmarCompraPorInternet(int)}) mediante el token que devuelve este método
 	 * @param pin	El pin que introduce el usuario
@@ -53,22 +55,26 @@ public class TarjetaCredito extends AbstractTarjeta {
 	 * @throws ImporteInvalidoException	Si el importe menor o igual a 0
 	 */
 	@Override
-	public Integer comprarPorInternet(int pin, double importe) throws TarjetaBloqueadaException, PinInvalidoException, SaldoInsuficienteException, ImporteInvalidoException {
-<span class="nc" id="L57">		comprobar(pin);</span>
-<span class="nc" id="L58">		this.intentos = 0;</span>
-<span class="nc bnc" id="L59" title="All 2 branches missed.">		if (importe&gt;getCreditoDisponible())</span>
-<span class="nc" id="L60">			throw new SaldoInsuficienteException();</span>
-<span class="nc bnc" id="L61" title="All 2 branches missed.">		if (importe&lt;=0)</span>
-<span class="nc" id="L62">			throw new ImporteInvalidoException(importe);</span>
-<span class="nc" id="L63">		SecureRandom dado = new SecureRandom();</span>
-<span class="nc" id="L64">		int token = 0;</span>
-<span class="nc bnc" id="L65" title="All 2 branches missed.">		for (int i=0; i&lt;=3; i++)</span>
-<span class="nc" id="L66">			token = (int) (token  + dado.nextInt(10) * Math.pow(10, i));</span>
-<span class="nc" id="L67">		token = 1234;</span>
-<span class="nc" id="L68">		this.compra = new Compra(importe, token);</span>
-<span class="nc" id="L69">		return token;</span>
+	public Integer comprarPorInternet(final int pin,final double importe) throws TarjetaBloqueadaException, PinInvalidoException, SaldoInsuficienteException, ImporteInvalidoException {
+<span class="nc" id="L59">		comprobar(pin);</span>
+<span class="nc" id="L60">		this.intentos = 0;</span>
+<span class="nc bnc" id="L61" title="All 2 branches missed.">		if (importe&gt;getCreditoDisponible())</span>
+		{
+<span class="nc" id="L63">			throw new SaldoInsuficienteException();</span>
+		}
+<span class="nc bnc" id="L65" title="All 2 branches missed.">		if (importe&lt;=0) {</span>
+<span class="nc" id="L66">			throw new ImporteInvalidoException(importe);</span>
+		}
+<span class="nc" id="L68">		final SecureRandom dado = new SecureRandom();</span>
+<span class="nc" id="L69">		int token = 0;</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">		for (int i=0; i&lt;=3; i++) {</span>
+<span class="nc" id="L71">			token = (int) (token  + dado.nextInt(10) * Math.pow(10, i));</span>
+		}
+<span class="nc" id="L73">		token = 1234;</span>
+<span class="nc" id="L74">		this.compra = new Compra(importe, token);</span>
+<span class="nc" id="L75">		return token;</span>
 	}
-	
+
 	/**
 	 * Permite hacer un compra en un comercio
 	 * @param pin	El pin que introduce el usuario
@@ -79,59 +85,64 @@ public class TarjetaCredito extends AbstractTarjeta {
 	 * @throws PinInvalidoException	Si el pin introducido es incorrecto
 	 */
 	@Override
-	public void comprar(int pin, double importe) throws ImporteInvalidoException, SaldoInsuficienteException, TarjetaBloqueadaException, PinInvalidoException {
-<span class="nc" id="L83">		comprobar(pin);</span>
-<span class="nc" id="L84">		this.intentos = 0;</span>
-<span class="nc bnc" id="L85" title="All 2 branches missed.">		if (importe&gt;getCreditoDisponible())</span>
-<span class="nc" id="L86">			throw new SaldoInsuficienteException();</span>
-<span class="nc bnc" id="L87" title="All 2 branches missed.">		if (importe&lt;=0)</span>
-<span class="nc" id="L88">			throw new ImporteInvalidoException(importe);</span>
-<span class="nc" id="L89">		MovimientoTarjetaCredito principal = new MovimientoTarjetaCredito(this, importe, &quot;Retirada de efectivo&quot;);</span>
-<span class="nc" id="L90">		Manager.getMovimientoTarjetaCreditoDAO().save(principal);</span>
-<span class="nc" id="L91">	}</span>
-	
+	public void comprar(final int pin,final double importe) throws ImporteInvalidoException, SaldoInsuficienteException, TarjetaBloqueadaException, PinInvalidoException {
+<span class="nc" id="L89">		comprobar(pin);</span>
+<span class="nc" id="L90">		this.intentos = 0;</span>
+<span class="nc bnc" id="L91" title="All 2 branches missed.">		if (importe&gt;getCreditoDisponible()) {</span>
+<span class="nc" id="L92">			throw new SaldoInsuficienteException();</span>
+		}
+<span class="nc bnc" id="L94" title="All 2 branches missed.">		if (importe&lt;=0) {</span>
+<span class="nc" id="L95">			throw new ImporteInvalidoException(importe);</span>
+		}
+<span class="nc" id="L97">		final MovimientoTarjetaCredito principal = new MovimientoTarjetaCredito(this, importe, &quot;Retirada de efectivo&quot;);</span>
+<span class="nc" id="L98">		Manager.getMovimientoTarjetaCreditoDAO().save(principal);</span>
+<span class="nc" id="L99">	}</span>
+
 	@Override
 	protected void bloquear() {
-<span class="nc" id="L95">		this.activa = false;</span>
-<span class="nc" id="L96">		Manager.getTarjetaCreditoDAO().save(this);</span>
-<span class="nc" id="L97">	}</span>
-	
+<span class="nc" id="L103">		this.activa = false;</span>
+<span class="nc" id="L104">		Manager.getTarjetaCreditoDAO().save(this);</span>
+<span class="nc" id="L105">	}</span>
+
 	public void liquidar() {
-<span class="nc" id="L100">		double gastos = 0.0;</span>
-<span class="nc" id="L101">		List&lt;MovimientoTarjetaCredito&gt; mm = Manager.getMovimientoTarjetaCreditoDAO().findByTarjetaId(this.idTarjeta);</span>
-<span class="nc bnc" id="L102" title="All 2 branches missed.">		for (MovimientoTarjetaCredito m : mm) {</span>
-<span class="nc bnc" id="L103" title="All 2 branches missed.">			if (!m.isLiquidado()) {</span>
-<span class="nc" id="L104">				gastos = gastos+m.getImporte();</span>
-<span class="nc" id="L105">				m.setLiquidado(true);</span>
-<span class="nc" id="L106">				Manager.getMovimientoTarjetaCreditoDAO().save(m);</span>
+<span class="nc" id="L108">		double gastos = 0.0;</span>
+<span class="nc" id="L109">		final List&lt;MovimientoTarjetaCredito&gt; movemenmt = Manager.getMovimientoTarjetaCreditoDAO().findByTarjetaId(this.idTarjeta);</span>
+<span class="nc bnc" id="L110" title="All 2 branches missed.">		for (final MovimientoTarjetaCredito m : movemenmt) {</span>
+<span class="nc bnc" id="L111" title="All 2 branches missed.">			if (!m.isLiquidado()) {</span>
+<span class="nc" id="L112">				gastos = gastos+m.getImporte();</span>
+<span class="nc" id="L113">				m.setLiquidado(true);</span>
+<span class="nc" id="L114">				Manager.getMovimientoTarjetaCreditoDAO().save(m);</span>
 			}
 		}
-<span class="nc" id="L109">		this.cuenta.retiroForzoso(gastos, &quot;Liquidación de tarjeta de crédito&quot;);</span>
-<span class="nc" id="L110">	}</span>
+<span class="nc" id="L117">		this.cuenta.retiroForzoso(gastos, &quot;Liquidación de tarjeta de crédito&quot;);</span>
+<span class="nc" id="L118">	}</span>
 
 	public Double getCredito() {
-<span class="nc" id="L113">		return credito;</span>
-	}
-	
-	public Double getCreditoDisponible() {
-<span class="nc" id="L117">		double gastos = 0.0;</span>
-<span class="nc" id="L118">		List&lt;MovimientoTarjetaCredito&gt; mm = Manager.getMovimientoTarjetaCreditoDAO().findByTarjetaId(this.idTarjeta);</span>
-<span class="nc bnc" id="L119" title="All 2 branches missed.">		for (MovimientoTarjetaCredito m : mm)</span>
-<span class="nc bnc" id="L120" title="All 2 branches missed.">			if (!m.isLiquidado())</span>
-<span class="nc" id="L121">				gastos = gastos + m.getImporte();</span>
-<span class="nc" id="L122">		return credito - gastos;</span>
+<span class="nc" id="L121">		return credito;</span>
 	}
 
-	public void setCredito(Double credito) {
-<span class="nc" id="L126">		this.credito = credito;</span>
-<span class="nc" id="L127">	}</span>
+	public Double getCreditoDisponible() {
+<span class="nc" id="L125">		double gastos = 0.0;</span>
+<span class="nc" id="L126">		final List&lt;MovimientoTarjetaCredito&gt; movemenmt = Manager.getMovimientoTarjetaCreditoDAO().findByTarjetaId(this.idTarjeta);</span>
+<span class="nc bnc" id="L127" title="All 2 branches missed.">		for (final MovimientoTarjetaCredito m : movemenmt) {</span>
+<span class="nc bnc" id="L128" title="All 2 branches missed.">			if (!m.isLiquidado()) {</span>
+<span class="nc" id="L129">				gastos = gastos + m.getImporte();</span>
+			}
+		}
+<span class="nc" id="L132">		return credito - gastos;</span>
+	}
+
+	public void setCredito(final Double credito) {
+<span class="nc" id="L136">		this.credito = credito;</span>
+<span class="nc" id="L137">	}</span>
 
 	@Override
-	public void cambiarPin(int pinViejo, int pinNuevo) throws PinInvalidoException {
-<span class="nc bnc" id="L131" title="All 2 branches missed.">		if (this.pin!=pinViejo)</span>
-<span class="nc" id="L132">			throw new PinInvalidoException();</span>
-<span class="nc" id="L133">		this.pin = pinNuevo;</span>
-<span class="nc" id="L134">		Manager.getTarjetaCreditoDAO().save(this);</span>
-<span class="nc" id="L135">	}</span>
+	public void cambiarPin(final int pinViejo,final int pinNuevo) throws PinInvalidoException {
+<span class="nc bnc" id="L141" title="All 2 branches missed.">		if (this.pin!=pinViejo) {</span>
+<span class="nc" id="L142">			throw new PinInvalidoException();</span>
+		}
+<span class="nc" id="L144">		this.pin = pinNuevo;</span>
+<span class="nc" id="L145">		Manager.getTarjetaCreditoDAO().save(this);</span>
+<span class="nc" id="L146">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
