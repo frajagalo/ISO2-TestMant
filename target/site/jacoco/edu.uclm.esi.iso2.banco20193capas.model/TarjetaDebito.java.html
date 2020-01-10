@@ -22,7 +22,7 @@ import edu.uclm.esi.iso2.banco20193capas.exceptions.TarjetaBloqueadaException;
 	 * @throws PinInvalidoException	Si el pin introducido es distinto del pin de la tarjeta
 	 */
 	@Override
-	public void sacarDinero(int pin, double importe) throws ImporteInvalidoException, SaldoInsuficienteException, TarjetaBloqueadaException, PinInvalidoException {
+	public void sacarDinero(final int pin, final double importe) throws ImporteInvalidoException, SaldoInsuficienteException, TarjetaBloqueadaException, PinInvalidoException {
 <span class="nc" id="L26">		comprobar(pin);</span>
 <span class="nc" id="L27">		this.intentos = 0;</span>
 <span class="nc" id="L28">		this.cuenta.retirar(importe);</span>
@@ -39,18 +39,19 @@ import edu.uclm.esi.iso2.banco20193capas.exceptions.TarjetaBloqueadaException;
 	 * @throws ImporteInvalidoException	Si el importe menor o igual a 0
 	 */
 	@Override
-	public Integer comprarPorInternet(int pin, double importe) throws TarjetaBloqueadaException, PinInvalidoException, SaldoInsuficienteException, ImporteInvalidoException {
+	public Integer comprarPorInternet(final int pin,final double importe) throws TarjetaBloqueadaException, PinInvalidoException, SaldoInsuficienteException, ImporteInvalidoException {
 <span class="nc" id="L43">		comprobar(pin);</span>
 <span class="nc" id="L44">		this.intentos = 0;</span>
-<span class="nc" id="L45">		SecureRandom dado = new SecureRandom();</span>
+<span class="nc" id="L45">		final SecureRandom dado = new SecureRandom();</span>
 <span class="nc" id="L46">		int token = 0;</span>
-<span class="nc bnc" id="L47" title="All 2 branches missed.">		for (int i=0; i&lt;=3; i++)</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">		for (int i=0; i&lt;=3; i++) {</span>
 <span class="nc" id="L48">			token = (int) (token + dado.nextInt(10) * Math.pow(10, i));</span>
-<span class="nc" id="L49">		token =  1234;</span>
-<span class="nc" id="L50">		this.compra = new Compra(importe, token);</span>
-<span class="nc" id="L51">		return token;</span>
+		}
+<span class="nc" id="L50">		token =  1234;</span>
+<span class="nc" id="L51">		this.compra = new Compra(importe, token);</span>
+<span class="nc" id="L52">		return token;</span>
 	}
-	
+
 	/**
 	 * Permite hacer un compra en un comercio
 	 * @param pin	El pin que introduce el usuario
@@ -61,24 +62,25 @@ import edu.uclm.esi.iso2.banco20193capas.exceptions.TarjetaBloqueadaException;
 	 * @throws PinInvalidoException	Si el pin introducido es incorrecto
 	 */
 	@Override
-	public void comprar(int pin, double importe) throws ImporteInvalidoException, SaldoInsuficienteException, TarjetaBloqueadaException, PinInvalidoException {
-<span class="nc" id="L65">		comprobar(pin);</span>
-<span class="nc" id="L66">		this.intentos = 0;</span>
-<span class="nc" id="L67">		this.cuenta.retirar(importe);</span>
-<span class="nc" id="L68">	}</span>
+	public void comprar(final int pin,final double importe) throws ImporteInvalidoException, SaldoInsuficienteException, TarjetaBloqueadaException, PinInvalidoException {
+<span class="nc" id="L66">		comprobar(pin);</span>
+<span class="nc" id="L67">		this.intentos = 0;</span>
+<span class="nc" id="L68">		this.cuenta.retirar(importe);</span>
+<span class="nc" id="L69">	}</span>
 
 	@Override
 	protected void bloquear() {
-<span class="nc" id="L72">		this.activa = false;</span>
-<span class="nc" id="L73">		Manager.getTarjetaDebitoDAO().save(this);</span>
-<span class="nc" id="L74">	}</span>
-	
+<span class="nc" id="L73">		this.activa = false;</span>
+<span class="nc" id="L74">		Manager.getTarjetaDebitoDAO().save(this);</span>
+<span class="nc" id="L75">	}</span>
+
 	@Override
-	public void cambiarPin(int pinViejo, int pinNuevo) throws PinInvalidoException {
-<span class="nc bnc" id="L78" title="All 2 branches missed.">		if (this.pin!=pinViejo)</span>
-<span class="nc" id="L79">			throw new PinInvalidoException();</span>
-<span class="nc" id="L80">		this.pin = pinNuevo;</span>
-<span class="nc" id="L81">		Manager.getTarjetaDebitoDAO().save(this);</span>
-<span class="nc" id="L82">	}</span>
+	public void cambiarPin(final int pinViejo,final int pinNuevo) throws PinInvalidoException {
+<span class="nc bnc" id="L79" title="All 2 branches missed.">		if (this.pin!=pinViejo) {</span>
+<span class="nc" id="L80">			throw new PinInvalidoException();</span>
+		}
+<span class="nc" id="L82">		this.pin = pinNuevo;</span>
+<span class="nc" id="L83">		Manager.getTarjetaDebitoDAO().save(this);</span>
+<span class="nc" id="L84">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
