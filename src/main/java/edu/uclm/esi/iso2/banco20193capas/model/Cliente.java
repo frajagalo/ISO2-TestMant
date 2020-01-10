@@ -9,51 +9,47 @@ import javax.persistence.Id;
 @Entity
 public class Cliente {
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private Long idCliente;
 	@Column(unique = true)
 	protected String nif;
 	
 	private String nombre;
 	private String apellidos;
 
-	
-	public Cliente() {
-	}
-	
 	/**
 	 * Crea un cliente 
 	 * @param nif	NIF del cliente
 	 * @param nombre	Nombre del cliente
 	 * @param apellidos	Apellidos del cliente
 	 */
-	public Cliente(String nif, String nombre, String apellidos) {
+	public Cliente(final String nif,final String nombre,final String apellidos) {
 		this.nif = nif;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 	}
 
 	public Long getId() {
-		return id;
+		return idCliente;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(final Long idCliente) {
+		this.idCliente = idCliente;
 	}
 	public String getNif() {
 		return nif;
 	}
-	public void setNif(String nif) {
+	public void setNif(final String nif) {
 		this.nif = nif;
 	}
 	public String getNombre() {
 		return nombre;
 	}
-	public void setNombre(String nombre) {
+	public void setNombre(final String nombre) {
 		this.nombre = nombre;
 	}
 	public String getApellidos() {
 		return apellidos;
 	}
-	public void setApellidos(String apellidos) {
+	public void setApellidos(final String apellidos) {
 		this.apellidos = apellidos;
 	}
 	
