@@ -13,52 +13,49 @@ import javax.persistence.ManyToOne;
 @Entity
 public class MovimientoCuenta {
 	@Id @GeneratedValue(strategy = GenerationType.AUTO) 
-	private Long id;
+	private Long idCuenta;
 	@ManyToOne
 	private Cuenta cuenta;
 	
 	private double importe;
 	private String concepto;
-	
-<span class="nc" id="L23">	public MovimientoCuenta() {</span>
-<span class="nc" id="L24">	}</span>
 
-<span class="nc" id="L26">	public MovimientoCuenta(Cuenta cuenta, double importe, String concepto) {</span>
-<span class="nc" id="L27">		this.importe = importe;</span>
-<span class="nc" id="L28">		this.concepto = concepto;</span>
-<span class="nc" id="L29">		this.cuenta = cuenta;</span>
-<span class="nc" id="L30">	}</span>
+<span class="nc" id="L23">	public MovimientoCuenta(final Cuenta cuenta,final double importe,final String concepto) {</span>
+<span class="nc" id="L24">		this.importe = importe;</span>
+<span class="nc" id="L25">		this.concepto = concepto;</span>
+<span class="nc" id="L26">		this.cuenta = cuenta;</span>
+<span class="nc" id="L27">	}</span>
 
 	public Long getId() {
-<span class="nc" id="L33">		return id;</span>
+<span class="nc" id="L30">		return idCuenta;</span>
 	}
 
-	public void setId(Long id) {
-<span class="nc" id="L37">		this.id = id;</span>
-<span class="nc" id="L38">	}</span>
+	public void setId(final Long idCuenta) {
+<span class="nc" id="L34">		this.idCuenta = idCuenta;</span>
+<span class="nc" id="L35">	}</span>
 
 	public Cuenta getCuenta() {
-<span class="nc" id="L41">		return cuenta;</span>
+<span class="nc" id="L38">		return cuenta;</span>
 	}
 
-	public void setCuenta(Cuenta cuenta) {
-<span class="nc" id="L45">		this.cuenta = cuenta;</span>
-<span class="nc" id="L46">	}</span>
+	public void setCuenta(final Cuenta cuenta) {
+<span class="nc" id="L42">		this.cuenta = cuenta;</span>
+<span class="nc" id="L43">	}</span>
 
 	public double getImporte() {
-<span class="nc" id="L49">		return importe;</span>
+<span class="nc" id="L46">		return importe;</span>
 	}
 
-	public void setImporte(double importe) {
-<span class="nc" id="L53">		this.importe = importe;</span>
-<span class="nc" id="L54">	}</span>
+	public void setImporte(final double importe) {
+<span class="nc" id="L50">		this.importe = importe;</span>
+<span class="nc" id="L51">	}</span>
 
 	public String getConcepto() {
-<span class="nc" id="L57">		return concepto;</span>
+<span class="nc" id="L54">		return concepto;</span>
 	}
 
-	public void setConcepto(String concepto) {
-<span class="nc" id="L61">		this.concepto = concepto;</span>
-<span class="nc" id="L62">	}</span>
+	public void setConcepto(final String concepto) {
+<span class="nc" id="L58">		this.concepto = concepto;</span>
+<span class="nc" id="L59">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
