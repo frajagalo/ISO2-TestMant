@@ -26,7 +26,7 @@ under the License.
     <copyright>&#169;2020</copyright>
     <item>
       <title>File: 28,
-             Errors: 573,
+             Errors: 563,
              Warnings: 0,
              Infos: 0
       </title>
@@ -44,20 +44,6 @@ under the License.
             </tr>
           </thead>
           <tbody>
-                          <tr>
-                <td>
-                  <a href="https://projects.spring.io/spring-boot/#/spring-boot-starter-parent/banco20193capas/checkstyle.html#edu.uclm.esi.iso2.banco20193capas.model.Tarjeta.java">edu/uclm/esi/iso2/banco20193capas/model/Tarjeta.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  98
-                </td>
-              </tr>
                           <tr>
                 <td>
                   <a href="https://projects.spring.io/spring-boot/#/spring-boot-starter-parent/banco20193capas/checkstyle.html#edu.uclm.esi.iso2.banco20193capas.exceptions.ImporteInvalidoException.java">edu/uclm/esi/iso2/banco20193capas/exceptions/ImporteInvalidoException.java</a>
@@ -111,7 +97,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  28
+                  29
                 </td>
               </tr>
                           <tr>
@@ -266,6 +252,20 @@ under the License.
                 </td>
                 <td>
                   2
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://projects.spring.io/spring-boot/#/spring-boot-starter-parent/banco20193capas/checkstyle.html#edu.uclm.esi.iso2.banco20193capas.model.AbstractTarjeta.java">edu/uclm/esi/iso2/banco20193capas/model/AbstractTarjeta.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  87
                 </td>
               </tr>
                           <tr>
